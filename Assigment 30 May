@@ -1,0 +1,94 @@
+Question 1: Count the no.of words,no.of letters,no.of lines available in your file
+
+1
+f=open("filename.txt",'r')
+2
+n_words=0
+3
+n_lines=0
+4
+n_letters=0
+5
+for i in f:
+6
+    word=i.split()
+7
+    n_words+=len(word)
+8
+for i in f:
+9
+    n_lines+=1
+10
+for i in f:
+11
+    word=i.split()
+12
+    for j in word:
+13
+        n_letters+=len(j)
+14
+print(n_words)
+15
+print(n_lines)
+16
+print(n_letters)
+Question 2: Copy the content of one file to another
+
+1
+f = open("sample.txt","w")
+2
+f.write("This to copy the content of omr filr to another")
+3
+f.close()
+4
+​
+5
+f = open("sample.txt","r")
+6
+data = f.read()
+7
+print(data)
+8
+f.close()
+9
+​
+10
+f = open("sample1.txt","w")
+11
+f.write("")
+12
+f.close()
+13
+​
+14
+with open("sample.txt") as f:
+15
+    with open("sample1.txt", "w") as f1:
+16
+        for line in f:
+17
+            f1.write(line)
+Question 3: Display the words starting with letter 'p'
+
+1
+str=input("Enter the String")
+2
+list=str.split()
+3
+for i in list:
+4
+    if i.startswith('p'):
+5
+        print(i)
+Question 4: Rename and remove files
+
+1
+import os
+2
+​
+3
+os.rename( "ml.txt", "aiml.txt" )
+1
+import os 
+2
+os.remove("aiml.txt")
