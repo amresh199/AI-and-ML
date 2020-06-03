@@ -1,0 +1,17 @@
+#Project
+#Password picker
+import string
+import random
+
+verblist=["Eat","Sleep","Bath","Walk","Stand","Play","Run","Cook","Build","Make"]
+nounlist=["pen","pencil","eraser","mobile","book","sofa","chair","table","remote","laptop"]
+
+while(True):
+        print(random.choice(verblist)+random.choice(nounlist),end="")
+        print(random.randint(1,100),end="")
+        print(random.choice(string.punctuation))
+        str=input("Enter Yes or No")
+        if(str=="Yes"):
+            continue
+        else:
+             break
